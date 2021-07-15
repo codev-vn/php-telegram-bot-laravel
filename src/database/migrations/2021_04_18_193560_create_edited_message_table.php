@@ -16,12 +16,13 @@ class CreateEditedMessageTable extends Migration
             $table->bigInteger('user_id')->nullable()->index('user_id')->comment('Unique user identifier');
             $table->dateTime('edit_date')->nullable()->comment('Date the message was edited in timestamp format');
             $table->text('text', 65535)->nullable()->comment('For text messages, the actual UTF-8 text of the message max message length 4096 char utf8');
-            $table->text(
-                'entities',
-                65535
-            )->nullable()->comment('For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text');
+            $table->text('entities',65535)->nullable()->comment('For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text');
             $table->text('caption', 65535)->nullable()->comment('For message with caption, the actual UTF-8 text of the caption');
             $table->index(['chat_id', 'message_id'], 'chat_id_2');
+
+            $table->foreign('chat_id', 'edited_message_ibfk_1')->references('id')->on('chat')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('chat_id', 'edited_message_ibfk_2')->references('chat_id')->on('message')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('user_id', 'edited_message_ibfk_3')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
         });
     }
 

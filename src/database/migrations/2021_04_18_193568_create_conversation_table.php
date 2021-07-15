@@ -17,6 +17,9 @@ class CreateConversationTable extends Migration
             $table->string('command', 160)->nullable()->default('')->comment('Default command to execute');
             $table->text('notes', 65535)->nullable()->comment('Data stored from command');
             $table->timestamps();
+
+            $table->foreign('user_id', 'conversation_ibfk_1')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('chat_id', 'conversation_ibfk_2')->references('id')->on('chat')->onUpdate('RESTRICT')->onDelete('RESTRICT');
         });
     }
 

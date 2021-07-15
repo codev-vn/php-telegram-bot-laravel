@@ -15,7 +15,10 @@ class CreateInlineQueryTable extends Migration
             $table->char('location')->nullable()->comment('Location of the user');
             $table->text('query', 65535)->comment('Text of the query');
             $table->char('offset')->nullable()->comment('Offset of the result');
+            $table->char('chat_type')->nullable()->comment('Optional. Type of the chat, from which the inline query was sent.');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
+
+            $table->foreign('user_id', 'inline_query_ibfk_1')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
     }
 

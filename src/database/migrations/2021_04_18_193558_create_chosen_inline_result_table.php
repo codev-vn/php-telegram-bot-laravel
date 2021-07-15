@@ -17,6 +17,8 @@ class CreateChosenInlineResultTable extends Migration
             $table->char('inline_message_id')->nullable()->comment('Identifier of the sent inline message');
             $table->text('query', 65535)->comment('The query that was used to obtain the result');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
+
+            $table->foreign('user_id', 'chosen_inline_result_ibfk_1')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
     }
 
