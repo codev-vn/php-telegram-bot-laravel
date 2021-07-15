@@ -23,8 +23,8 @@ class CreateTelegramUpdateTable extends Migration
             $table->bigInteger('pre_checkout_query_id')->unsigned()->nullable()->index('pre_checkout_query_id')->comment('New incoming pre-checkout query. Contains full information about checkout');
             $table->bigInteger('poll_id')->unsigned()->nullable()->index('poll_id')->comment('New poll state. Bots receive only updates about polls, which are sent or stopped by the bot');
             $table->bigInteger('poll_answer_poll_id')->unsigned()->nullable()->index('poll_answer_poll_id')->comment('A user changed their answer in a non-anonymous poll. Bots receive new votes only in polls that were sent by the bot itself.');
-            $table->bigInteger('my_chat_member_updated_id')->unsigned()->nullable()->index('my_chat_member_updated_id')->comment('The bot''s chat member status was updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.');
-            $table->bigInteger('chat_member_updated_id')->unsigned()->nullable()->index('chat_member_updated_id')->comment('A chat member''s status was updated in a chat. The bot must be an administrator in the chat and must explicitly specify “chat_member” in the list of allowed_updates to receive these updates.');
+            $table->bigInteger('my_chat_member_updated_id')->unsigned()->nullable()->index('my_chat_member_updated_id')->comment('The bot\'s chat member status was updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.');
+            $table->bigInteger('chat_member_updated_id')->unsigned()->nullable()->index('chat_member_updated_id')->comment('A chat member\'s status was updated in a chat. The bot must be an administrator in the chat and must explicitly specify “chat_member” in the list of allowed_updates to receive these updates.');
             $table->index(['chat_id', 'message_id'], 'message_id');
 
             $table->foreign('chat_id', 'telegram_update_ibfk_1')->references('chat_id')->on('message')->onUpdate('RESTRICT')->onDelete('RESTRICT');

@@ -15,7 +15,7 @@ class CreateUserTable extends Migration
             $table->char('first_name')->default('')->comment('User\'s or bot\'s first name');
             $table->char('last_name')->nullable()->comment('User\'s or bot\'s username');
             $table->char('username', 191)->nullable()->index('username')->comment('User\'s or bot\'s username');
-            $table->char('language_code', 10)->nullable()->comment('IETF language tag of the user''s language');
+            $table->char('language_code', 10)->nullable()->comment('IETF language tag of the user\'s language');
             $table->timestamps();
         });
     }

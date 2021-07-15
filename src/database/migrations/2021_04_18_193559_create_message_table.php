@@ -19,7 +19,7 @@ class CreateMessageTable extends Migration
             $table->bigInteger('forward_from_chat')->nullable()->index('forward_from_chat')->comment('Unique chat identifier, chat the original message belongs to');
             $table->bigInteger('forward_from_message_id')->nullable()->comment('Unique chat identifier of the original message in the channel');
             $table->text('forward_signature')->nullable()->comment('For messages forwarded from channels, signature of the post author if present');
-            $table->text('forward_sender_name')->nullable()->comment('Sender''s name for messages forwarded from users who disallow adding a link to their account in forwarded messages');
+            $table->text('forward_sender_name')->nullable()->comment('Sender\'s name for messages forwarded from users who disallow adding a link to their account in forwarded messages');
             $table->dateTime('forward_date')->nullable()->comment('date the original message was sent in timestamp format');
             $table->bigInteger('reply_to_chat')->nullable()->index('reply_to_chat')->comment('Unique chat identifier');
             $table->bigInteger('reply_to_message')->unsigned()->nullable()->index('reply_to_message')->comment('Message that this message is reply to');
@@ -61,7 +61,7 @@ class CreateMessageTable extends Migration
             $table->text('successful_payment', 65535)->nullable()->comment('Message is a service message about a successful payment, information about the payment');
             $table->text('connected_website', 65535)->nullable()->comment('The domain name of the website on which the user has logged in.');
             $table->text('passport_data', 65535)->nullable()->comment('Telegram Passport data');
-            $table->text('proximity_alert_triggered', 65535)->nullable()->comment('Service message. A user in the chat triggered another user''s proximity alert while sharing Live Location.');
+            $table->text('proximity_alert_triggered', 65535)->nullable()->comment('Service message. A user in the chat triggered another user\'s proximity alert while sharing Live Location.');
             $table->text('voice_chat_scheduled', 65535)->nullable()->comment('VoiceChatScheduled object. Message is a service message: voice chat scheduled');
             $table->text('voice_chat_started', 65535)->nullable()->comment('VoiceChatStarted object. Message is a service message: voice chat started');
             $table->text('voice_chat_ended', 65535)->nullable()->comment('VoiceChatEnded object. Message is a service message: voice chat ended');
