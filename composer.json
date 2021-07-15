@@ -1,0 +1,73 @@
+{
+    "name": "codev-vn/php-telegram-bot-laravel",
+    "type": "library",
+    "description": "Package to integrate PHP Telegram Bot library in Laravel 8.x",
+    "keywords": [
+        "laravel",
+        "telegram",
+        "bot"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/codev-vn/php-telegram-bot-laravel",
+    "support": {
+        "issues": "https://github.com/codev-vn/php-telegram-bot-laravel/issues",
+        "source": "https://github.com/codev-vn/php-telegram-bot-laravel"
+    },
+    "authors": [
+        {
+            "name": "Phong Tran",
+            "email": "phong.tran@codev.vn",
+            "homepage": "https://codev.vn",
+            "role": "Maintainer, Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/database": "^8.50",
+        "illuminate/support": "^8.50",
+        "longman/telegram-bot": "^0.74.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^5.6",
+        "longman/php-code-style": "^7.0",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpTelegramBot\\Laravel\\": "src/Laravel"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ],
+        "coverage-text": [
+            "vendor/bin/phpunit --coverage-text --colors=never"
+        ],
+        "coverage-html": [
+            "vendor/bin/phpunit --coverage-html public/coverage"
+        ],
+        "phpcs": [
+            "vendor/bin/phpcs --standard=phpcs.xml -spn --encoding=utf-8 src/ tests/ --report-width=150"
+        ],
+        "phpcbf": [
+            "vendor/bin/phpcbf --standard=phpcs.xml -spn --encoding=utf-8 src/ tests/ --report-width=150"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PhpTelegramBot\\Laravel\\ServiceProvider"
+            ]
+        }
+    }
+}
