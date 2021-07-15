@@ -1,13 +1,13 @@
 # Telegram Bot Package for Laravel 8.x
 
-[![Build Status](https://travis-ci.org/php-telegram-bot/laravel.svg?branch=master)](https://travis-ci.org/php-telegram-bot/laravel)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/php-telegram-bot/laravel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/php-telegram-bot/laravel/?b=master)
-[![Code Quality](https://img.shields.io/scrutinizer/g/php-telegram-bot/laravel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/php-telegram-bot/laravel/?b=master)
-[![Latest Stable Version](https://img.shields.io/packagist/v/php-telegram-bot/laravel.svg)](https://packagist.org/packages/php-telegram-bot/laravel)
-[![Total Downloads](https://img.shields.io/packagist/dt/php-telegram-bot/laravel.svg)](https://packagist.org/packages/php-telegram-bot/laravel)
-[![Downloads Month](https://img.shields.io/packagist/dm/php-telegram-bot/laravel.svg)](https://packagist.org/packages/php-telegram-bot/laravel)
+[![Build Status](https://travis-ci.org/codev-vn/php-telegram-bot-laravel.svg?branch=master)](https://travis-ci.org/codev-vn/php-telegram-bot-laravel)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/codev-vn/php-telegram-bot-laravel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/codev-vn/php-telegram-bot-laravel/?b=master)
+[![Code Quality](https://img.shields.io/scrutinizer/g/codev-vn/php-telegram-bot-laravel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/codev-vn/php-telegram-bot-laravel/?b=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/codev-vn/php-telegram-bot-laravel.svg)](https://packagist.org/packages/codev-vn/php-telegram-bot-laravel)
+[![Total Downloads](https://img.shields.io/packagist/dt/codev-vn/php-telegram-bot-laravel.svg)](https://packagist.org/packages/codev-vn/php-telegram-bot-laravel)
+[![Downloads Month](https://img.shields.io/packagist/dm/codev-vn/php-telegram-bot-laravel.svg)](https://packagist.org/packages/codev-vn/php-telegram-bot-laravel)
 [![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D5.5.9-8892BF.svg)](https://php.net/)
-[![License](https://img.shields.io/packagist/l/php-telegram-bot/laravel.svg)](https://github.com/php-telegram-bot/laravel/LICENSE.md)
+[![License](https://img.shields.io/packagist/l/codev-vn/php-telegram-bot-laravel.svg)](https://github.com/codev-vn/php-telegram-bot-laravel/LICENSE.md)
 
 This package helps easily integrate [PHP Telegram Bot](https://github.com/php-telegram-bot/core) library in Laravel application.
 
@@ -75,7 +75,7 @@ write more tests
 ## Troubleshooting
 
 If you like living on the edge, please report any bugs you find on the
-[php-telegram-bot/laravel issues](https://github.com/php-telegram-bot/laravel/issues) page.
+[codev-vn/php-telegram-bot-laravel issues](https://github.com/codev-vn/php-telegram-bot-laravel/issues) page.
 
 ## Contributing
 
