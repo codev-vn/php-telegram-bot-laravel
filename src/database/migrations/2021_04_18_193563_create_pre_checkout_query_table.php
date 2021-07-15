@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateƠreCheckoutQueryTable extends Migration
+class CreatePreCheckoutQueryTable extends Migration
 {
     public function up()
     {
@@ -19,7 +19,7 @@ class CreateƠreCheckoutQueryTable extends Migration
             $table->text('order_info', 65535)->nullable()->comment('Order info provided by the user');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
 
-            $table->foreign('user_id', 'callback_query_ibfk_1')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('user_id', 'pre_checkout_query_ibfk_1')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
         });
     }
 

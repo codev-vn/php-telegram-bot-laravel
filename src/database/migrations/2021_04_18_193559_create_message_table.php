@@ -68,15 +68,6 @@ class CreateMessageTable extends Migration
             $table->text('voice_chat_participants_invited', 65535)->nullable()->comment('VoiceChatParticipantsInvited object. Message is a service message: new participants invited to a voice chat');
             $table->text('reply_markup', 65535)->nullable()->comment('Inline keyboard attached to the message');
             $table->primary(['chat_id', 'id']);
-            
-            $table->foreign('user_id')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('chat_id')->references('id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('forward_from')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('forward_from_chat')->references('id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('reply_to_chat')->references('chat_id')->on('message')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('reply_to_message')->references('id')->on('message')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('via_bot')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('left_chat_member')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
     }
 

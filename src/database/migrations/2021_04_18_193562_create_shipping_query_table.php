@@ -16,7 +16,7 @@ class CreateShippingQueryTable extends Migration
             $table->char('shipping_address')->nullable()->comment('User specified shipping address');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
 
-            $table->foreign('user_id', 'callback_query_ibfk_1')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('user_id', 'shipping_query_ibfk_1')->references('id')->on('user')->onUpdate('RESTRICT')->onDelete('RESTRICT');
         });
     }
 
