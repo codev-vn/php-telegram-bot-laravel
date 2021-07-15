@@ -73,8 +73,8 @@ class CreateMessageTable extends Migration
             $table->foreign('chat_id')->references('id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
             $table->foreign('forward_from')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
             $table->foreign('forward_from_chat')->references('id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('reply_to_chat')->references('chat_id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
-            $table->foreign('reply_to_message')->references('id')->on('chat')->onUpdate("RESTRICT")->onDelete('RESTRICT');
+            $table->foreign('reply_to_chat')->references('chat_id')->on('message')->onUpdate("RESTRICT")->onDelete('RESTRICT');
+            $table->foreign('reply_to_message')->references('id')->on('message')->onUpdate("RESTRICT")->onDelete('RESTRICT');
             $table->foreign('via_bot')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
             $table->foreign('left_chat_member')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
