@@ -19,7 +19,6 @@ class AddForeignKeysToCallbackQueryTable extends Migration
     {
         Schema::table('callback_query', static function (Blueprint $table) {
             $table->dropForeign('callback_query_ibfk_1');
-            $table->dropForeign('callback_query_ibfk_2');
         });
     }
 }

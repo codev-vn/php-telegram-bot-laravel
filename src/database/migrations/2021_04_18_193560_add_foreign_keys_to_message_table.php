@@ -27,7 +27,6 @@ class AddForeignKeysToMessageTable extends Migration
             $table->dropForeign('message_ibfk_2');
             $table->dropForeign('message_ibfk_3');
             $table->dropForeign('message_ibfk_4');
-            $table->dropForeign('message_ibfk_5');
             $table->dropForeign('message_ibfk_6');
             $table->dropForeign('message_ibfk_7');
         });

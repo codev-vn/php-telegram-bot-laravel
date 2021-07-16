@@ -18,7 +18,7 @@ class CreateInlineQueryTable extends Migration
             $table->char('chat_type')->nullable()->comment('Optional. Type of the chat, from which the inline query was sent.');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
 
-            $table->foreign('user_id', 'inline_query_ibfk_1')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
+            $table->foreign('user_id')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
     }
 

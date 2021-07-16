@@ -10,7 +10,7 @@ class CreateChatMemberUpdatedTable extends Migration
     public function up()
     {
         Schema::create('chat_member_updated', static function (Blueprint $table) {
-            $table->bigInteger('id')->unsigned()->primary()->comment('Unique query identifier');
+            $table->bigInteger('id', true)->unsigned()->comment('Unique query identifier');
             $table->bigInteger('chat_id')->nullable()->index('chat_id')->comment('Unique poll identifier');
             $table->bigInteger('user_id')->nullable()->index('user_id')->comment('User who sent the query');
             $table->dateTime('date')->nullable()->comment('Date the change was done in Unix time');

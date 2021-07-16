@@ -18,7 +18,7 @@ class CreateChosenInlineResultTable extends Migration
             $table->text('query', 65535)->comment('The query that was used to obtain the result');
             $table->dateTime('created_at')->nullable()->comment('Entry date creation');
 
-            $table->foreign('user_id', 'chosen_inline_result_ibfk_1')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
+            $table->foreign('user_id')->references('id')->on('user')->onUpdate("RESTRICT")->onDelete('RESTRICT');
         });
     }
 

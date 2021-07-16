@@ -29,10 +29,7 @@ class AddForeignKeysToTelegramUpdateTable extends Migration
     public function down()
     {
         Schema::table('telegram_update', static function (Blueprint $table) {
-            $table->dropForeign('telegram_update_ibfk_1');
-            $table->dropForeign('telegram_update_ibfk_2');
             $table->dropForeign('telegram_update_ibfk_3');
-            $table->dropForeign('telegram_update_ibfk_4');
             $table->dropForeign('telegram_update_ibfk_5');
             $table->dropForeign('telegram_update_ibfk_6');
             $table->dropForeign('telegram_update_ibfk_7');
